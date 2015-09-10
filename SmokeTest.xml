@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Premierleague Test Suite">
 	<test name="Smoke Test Cases">
+		<parameter name="userId" value="dhaval_pathak2001@yahoo.com"></parameter>
+		<parameter name="password" value="kal100"></parameter>
 		<classes>
 			<class name="guru.dhaval.premierleague.LoginTest" />
 		</classes>
