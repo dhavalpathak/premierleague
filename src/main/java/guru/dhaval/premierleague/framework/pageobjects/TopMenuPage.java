@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 public class TopMenuPage {
 
 	@FindBy (how = How.LINK_TEXT, using = "Logout")
-	WebElement logoutLink;
+	private static WebElement logoutLink;
 	
 	public void Logout() {
 		// TODO Auto-generated method stub
