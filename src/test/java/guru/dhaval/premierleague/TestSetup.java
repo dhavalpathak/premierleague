@@ -3,28 +3,29 @@ package guru.dhaval.premierleague;
 import guru.dhaval.premierleague.framework.Browser;
 import guru.dhaval.premierleague.framework.pageobjects.Pages;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 
 public class TestSetup {
   
+	private static String browser;
 	@BeforeSuite
 	public void setupWebDriver() {
-		String browser = (String)System.getProperty("browser");
-		Browser.init(browser);
+		browser = (String)System.getProperty("browser");
 	}
 	
-	@BeforeTest
+	@BeforeMethod
 	@Parameters ({"userId", "password"}) 
 	public void beforeTest(String userId, String password) {
+		Browser.init(browser);
 		Pages.LoginPage().goTo();
 		Pages.LoginPage().Login(userId, password);
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void afterTest() {
 		Pages.TopMenuPage().Logout();
 		Browser.close();

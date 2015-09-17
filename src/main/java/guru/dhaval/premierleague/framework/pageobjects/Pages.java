@@ -24,5 +24,11 @@ public class Pages {
 		PageFactory.initElements(Browser.driver, topMenuPage);
 		return topMenuPage;
 	}
+
+	public static HistoryPage HistoryPage() {
+		HistoryPage historyPage = new HistoryPage();
+		PageFactory.initElements(Browser.driver, historyPage);
+		return historyPage;
+	}
 }
 
