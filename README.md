@@ -7,7 +7,6 @@ fill free to suggest improvements and point out the mistakes on dhaval_pathak200
 The Basic frework is set I still have to add more test cases.
 
 ## Test cases currently includes
-  Login
-  History Page
+  Login and History Page
   
 ##### Work under progress more test cases will be added soon
