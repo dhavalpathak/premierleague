@@ -22,6 +22,7 @@ public class Browser {
 			System.setProperty("webdriver.ie.driver", IE_DRIVER);
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			caps.setCapability( InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			//caps.setCapability("requireWindowFocus", true);
 			driver = new InternetExplorerDriver(caps);
 		} else if (browser.toLowerCase().equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
