@@ -27,7 +27,7 @@ public class Browser {
 			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
 			driver = new ChromeDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 	
