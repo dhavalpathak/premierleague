@@ -20,9 +20,9 @@ public class Browser {
 			driver = new FirefoxDriver();
 		} else if (browser.toLowerCase().equals("ie")) {
 			System.setProperty("webdriver.ie.driver", IE_DRIVER);
-			driver = new InternetExplorerDriver();
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			caps.setCapability( InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+			driver = new InternetExplorerDriver(caps);
 		} else if (browser.toLowerCase().equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
 			driver = new ChromeDriver();
