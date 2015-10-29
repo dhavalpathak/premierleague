@@ -23,6 +23,7 @@ public class Browser {
 			DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
 			caps.setCapability( InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			caps.setCapability("requireWindowFocus", true);
+			caps.setCapability("ie.ensureCleanSession", true);
 			driver = new InternetExplorerDriver(caps);
 		} else if (browser.toLowerCase().equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", CHROME_DRIVER);
